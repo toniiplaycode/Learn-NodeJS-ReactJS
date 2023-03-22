@@ -16,6 +16,15 @@
 - tổ chức lại file (https://youtu.be/JsQfIjzaBNE?t=1693)
 - components là chia code UI thành những khối độc lập, từ nhiều components đó gộp lại thành 1 website
 - có 2 loại component: class component và function component (function bình thường và arrow function)
-- bình thường 1 biến sẽ gán 1 giá trị gì đó (string, số, hằng số,...). nhưng JSX sẽ gán 1 thẻ HTML (HTML được bọc trong dấu "()") và viết được JS được bên trong HTML (mã JS được bọc trong dấu "{}" )
+- bình thường 1 biến sẽ gán 1 giá trị gì đó (string, số, hằng số,...). nhưng cú pháp JSX sẽ gán 1 thẻ HTML (HTML được bọc trong dấu "()") và viết được JS (biến, xử lý logic)  được bên trong HTML (mã JS được bọc trong dấu "{}" ). 1 hàm trong JS return HTML đó được gọi là JSX,
+comment JS trong JEX dùng "{/**/}"
+    * lưu ý: 
+        + JSX chỉ trả về 1 block element DOM muốn trả về nhiều block thì:
+            #cách 1: có 1 thằng block cha bao ở ngoài các block con (cách này thì bên DOM HTML sẽ có 1 block cha bọc ở ngoài)
+            #cách 2: dùng Fragment (cách này vẫn trả ra được nhiều block, nhưng không có block cha nào bọc ở ngoài, version ReactJS cũ thì dùng "<Fragment></Fragment>", version mới thì chỉ cần "<></>" )
+        + đặt class cho thẻ HTML thì dùng className
 - tạo file myComponent.js để viết 1 class component và sử dụng component đó trong file App.js, để sử dụng được 1 component thì import nó và dùng như thẻ tag HTML <tên component/> hoặc <tên component><tên component/>
-    * lưu ý, đặt tên cho component không được dùng camelCase mà phải đặt theo PascalCase
+    * lưu ý: đặt tên cho component không được dùng camelCase mà phải đặt theo PascalCase
+- state là dữ liệu được sử dụng để quản lý và điều khiển hành vi của một component, lưu trữ các dữ liệu động của một component và có thể được sửa đổi theo thời gian (real time), khi state thay đổi thì các component (giao diện) cũng sẽ thay đổi theo, stage là một object gồm key và value. Ví dụ về state bên file MyComponent.js
+- để truy xuất được value trong state dùng: this.state.<tên key>
+
