@@ -3,7 +3,7 @@
 - hạ React 18 xuống ReactJS 17 làm theo AskIT (https://www.youtube.com/watch?v=rKOEjUqBbX8&list=PLncHg6Kn2JT4C0enPGQPK7ZIlEoZ1ZvRy&index=8) 
 - cấu trúc lại các file trong project từ 1 đống file nó tự cài (https://youtu.be/JsQfIjzaBNE?t=608), tạo các folder: assets, component, routes, store, styles, utils, views. Trong assets có 2 folder là images, audio
     + folder assets chứa các file muốn public ra ngoài ảnh, video, audio,...
-    + folder component là nơi để chia sẻ, sử dụng lại, tái sử dụng source code (HTML, CSS, JS)
+    + folder components là nơi để chia sẻ, sử dụng lại, tái sử dụng các component
     + folder routes là nơi định nghĩa các route (các đường dẫn của trang web)
     + folder services để gọi API, kết nối với back-end
     + folder store để viết REDUX
@@ -14,3 +14,8 @@
 - trong project này dùng SCSS để CSS nhanh hơn
 - tải package sass để dùng SCSS (npm i sass)
 - tổ chức lại file (https://youtu.be/JsQfIjzaBNE?t=1693)
+- components là chia code UI thành những khối độc lập, từ nhiều components đó gộp lại thành 1 website
+- có 2 loại component: class component và function component (function bình thường và arrow function)
+- bình thường 1 biến sẽ gán 1 giá trị gì đó (string, số, hằng số,...). nhưng JSX sẽ gán 1 thẻ HTML (HTML được bọc trong dấu "()") và viết được JS được bên trong HTML (mã JS được bọc trong dấu "{}" )
+- tạo file myComponent.js để viết 1 class component và sử dụng component đó trong file App.js, để sử dụng được 1 component thì import nó và dùng như thẻ tag HTML <tên component/> hoặc <tên component><tên component/>
+    * lưu ý, đặt tên cho component không được dùng camelCase mà phải đặt theo PascalCase
