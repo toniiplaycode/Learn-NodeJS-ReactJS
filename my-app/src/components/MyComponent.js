@@ -1,4 +1,5 @@
 import React from 'react'; // nạp thư viện react
+import ChildComponent from './ChildComponent'; // nạp component con
 
 class MyComponent extends React.Component { // tạo class Component
     // các biến, hàm khai báo trên render() không cần dùng let, const, var
