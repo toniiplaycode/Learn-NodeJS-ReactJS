@@ -49,10 +49,8 @@ class FormComponent extends React.Component{
                     </div>
                 </form>
 
-                {/* gọi các component con và truyền props cho mỗi child */}
-                <ChildComponent name={'child 1'}/>
-                <ChildComponent name={'child 2'}/>
-                <ChildComponent name={'child 3'}/> 
+                {/* gọi component con và truyền props */}
+                <ChildComponent name={'ThanhToan'} age={20}/>
             </>
             // nếu gán value của ô input bằng thuộc tính của state thì không thể nhập value từ bàn phím vào ô input được, muốn nhập được khi đã gán value bằng thuộc tính state thì phải dùng events onChange
         )

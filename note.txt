@@ -16,7 +16,7 @@
 - tổ chức lại file (https://youtu.be/JsQfIjzaBNE?t=1693)
 - components là chia code UI thành những khối độc lập, từ nhiều components đó gộp lại thành 1 website
 - có 2 loại component: class component và function component (function bình thường và arrow function)
-- bình thường 1 biến sẽ gán 1 giá trị gì đó (string, số, hằng số,...). nhưng cú pháp JSX sẽ gán 1 thẻ HTML (HTML được bọc trong dấu "()") và viết được JS (biến, xử lý logic)  được bên trong HTML (mã JS được bọc trong dấu "{}" ). 1 hàm trong JS return HTML đó được gọi là JSX, comment JS trong JEX dùng "{/**/}"
+- bình thường 1 biến sẽ gán 1 giá trị gì đó (string, số, hằng số,...). nhưng cú pháp JSX sẽ gán 1 thẻ HTML (HTML được bọc trong dấu "()") và viết được JS (biến, xử lý logic)  được bên trong HTML (mã JS được bọc trong dấu "{}" ). 1 hàm trong JS return HTML đó được gọi là JSX, comment JS trong JEX dùng "{/**/}", JSX (JavaScript XML)
     * lưu ý: 
         + JSX chỉ trả về 1 block element DOM muốn trả về nhiều block thì:
             #cách 1: có 1 thằng block cha bao ở ngoài các block con (cách này thì bên DOM HTML sẽ có 1 block cha bọc ở ngoài)
@@ -38,4 +38,4 @@
 - tạo file FormComponent.js để lấy dữ liệu từ form, dữ liệu ở form sẽ được lưu vào state. Tron ứng dụng thực tế từ các dữ liệu có trong state đó, ta truyền dữ liệu state đó lên API cho back-end xử lý (phía server side)
 - tree components: để xem quan hệ CHA-CON vào components của devTools xem
 - tạo child component của 1 component, tạo file ChildComponent.js là component con của 1 component import vào
-- truyền props là truyền dữ liệu từ component CHA xuống component CON và không thể truyền ngược lại
+- props dùng để truyền dữ liệu từ component CHA xuống component CON và không thể truyền ngược lại, props có kiểu dữ liệu là object giống như state
