@@ -1,4 +1,5 @@
 import React from "react"; // nạp thư viện react
+import ChildComponent from './ChildComponent'; // nạp component con
 
 class FormComponent extends React.Component{
     state = {
@@ -47,6 +48,11 @@ class FormComponent extends React.Component{
                         </button>
                     </div>
                 </form>
+
+                {/* gọi các component con và truyền props cho mỗi child */}
+                <ChildComponent name={'child 1'}/>
+                <ChildComponent name={'child 2'}/>
+                <ChildComponent name={'child 3'}/> 
             </>
             // nếu gán value của ô input bằng thuộc tính của state thì không thể nhập value từ bàn phím vào ô input được, muốn nhập được khi đã gán value bằng thuộc tính state thì phải dùng events onChange
         )
