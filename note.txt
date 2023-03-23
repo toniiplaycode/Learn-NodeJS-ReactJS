@@ -35,3 +35,4 @@ comment JS trong JEX dùng "{/**/}"
         + vì mình đang dùng JSX nên tên hàm sự kiện phải đặt trong dấu "{}"
             ex: <button onClick={() => this.handleFunction()}> click me! /button> // hàm handleFunction được khai báo trên rendet()
 - khai báo biến, hàm, state ở phạm vi nằm trên render() được gọi là các thuộc tính của comment đó, khi muốn truy cập đến các thuộc tính ta dùng "this". Còn các biến, hàm trong phạm render() được gọi là các biến local, hàm local, và ta truy xuất như bình thường 
+- setState là hàm dùng để cập nhật lại thuộc tính của state và đồng thời React nó sẽ tự động re-render (gọi lại hàm render()) để hiện ra giao diện ngay lập tức
