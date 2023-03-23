@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        
         <p>
           Hello World With ReactJS
         </p>
@@ -15,14 +16,6 @@ function App() {
         {/* <MyComponent></MyComponent> */} {/* dùng kiểu full khi component có con */}
         {/* --> 2 cách để sử dụng component như thẻ tag HTML */}
 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );

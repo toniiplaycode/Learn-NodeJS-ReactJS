@@ -25,6 +25,13 @@ comment JS trong JEX dùng "{/**/}"
         + đặt class cho thẻ HTML thì dùng className
 - tạo file myComponent.js để viết 1 class component và sử dụng component đó trong file App.js, để sử dụng được 1 component thì import nó và dùng như thẻ tag HTML <tên component/> hoặc <tên component><tên component/>
     * lưu ý: đặt tên cho component không được dùng camelCase mà phải đặt theo PascalCase
-- state là dữ liệu được sử dụng để quản lý và điều khiển hành vi của một component, lưu trữ các dữ liệu động của một component và có thể được sửa đổi theo thời gian (real time), khi state thay đổi thì các component (giao diện) cũng sẽ thay đổi theo, stage là một object gồm key và value. Ví dụ về state bên file MyComponent.js
+- state là một đối tượng JavaScript chứa các thuộc tính của một component và có thể thay đổi trong quá trình thực thi của component đó. Khi state của một component thay đổi, React sẽ tự động cập nhật giao diện của component để phản ánh các thay đổi đó(real time). stage là một object gồm key và value. Ví dụ về state bên file MyComponent.js
 - để truy xuất được value trong state dùng: this.state.<tên key>
-
+- cài React Dev Tools extension, công dụng (https://chat.openai.com/chat/b6511a33-f798-46ca-8237-ba1ebd107cfd)
+- Handling Events: xử lý events với React. Ví dụ hàm xử lý sự kiện được viết ở file MyComponent.js và được xử dụng ở file App.js
+    * lưu ý:
+        + tên hàm xử lý events đặt kiểu camelCase (nhớ kĩ)
+        + tên sự kiện cũng phải đặt camelCase (nhớ kĩ)
+        + vì mình đang dùng JSX nên tên hàm sự kiện phải đặt trong dấu "{}"
+            ex: <button onClick={() => this.handleFunction()}> click me! /button> // hàm handleFunction được khai báo trên rendet()
+- khai báo biến, hàm, state ở phạm vi nằm trên render() được gọi là các thuộc tính của comment đó, khi muốn truy cập đến các thuộc tính ta dùng "this". Còn các biến, hàm trong phạm render() được gọi là các biến local, hàm local, và ta truy xuất như bình thường 
