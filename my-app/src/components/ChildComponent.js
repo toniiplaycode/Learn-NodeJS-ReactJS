@@ -12,16 +12,10 @@ class ChildComponent extends React.Component{ //#cách 1 dùng class component (
     }
 
     render() {
-        // let name = this.props.name;
-        // let age = this.props.age;
-        // let {name, age} = this.props; // có thể dùng destructuring để lấy được value từ props
-        let {arrJobs} = this.props;
+        let {arrJobs} = this.props; // có thể dùng destructuring để lấy được value từ props
         let {showJobs} = this.state;
         return(
             <>
-                {/* truy cập prop là name được truyền bên component CHA */}
-                {/* <div>Child Component, check props: {name} {age}</div> */}
-
                 {/* dùng condition ternary Operator để xử lý SHOW HIDE job-list */}
                 {showJobs === false ? 
                     <>
@@ -37,7 +31,7 @@ class ChildComponent extends React.Component{ //#cách 1 dùng class component (
                                 arrJobs.map((item) => {
                                     return (
                                         <div key={item.id}> {/* dùng key cho mỗi item,  không nên dùng index của hàm map để làm key vì các item trong 1 mảng có thể đổi, nên ta dùng id của từng item có sẵn */}
-                                            {item.title} - {item.salary}$z
+                                            {item.title} - {item.salary}$
                                         </div>
                                     )
                                 })

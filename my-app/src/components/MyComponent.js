@@ -1,59 +1,29 @@
-import React from 'react'; // nạp thư viện react
-import ChildComponent from './ChildComponent'; // nạp component con
+import React from "react";
+import FormComponent from "./FormComponent"; // nạp component FormComponent
+import ChildComponent from "./ChildComponent"; // nạp component ChildComponent
 
-class MyComponent extends React.Component { // tạo class Component
-    // các biến, hàm khai báo trên render() không cần dùng let, const, var
-    state = { // state được định nghĩa ở trên render()
-        name: 'Thanh Toan',
-        today: `${new Date().getDate()} / ${new Date().getMonth()+1} / ${new Date().getFullYear()}`,
-    }        
+class MyComponent extends React.Component{
+    state = {
+        arrJobs: [
+            { id: '1', title: 'Developers', salary: 500},
+            { id: '2', title: 'Testers', salary: 400},
+            { id: '3', title: 'Project managers', salary: 1000}
+        ]
+    }
 
-    handleClickButton = (logger) => {
-        alert(logger);
+    addNewJob = (job) => {
+        // console.log(job);
+        this.setState({ // thêm job mới từ component con (FormComponent)
+            arrJobs: [...this.state.arrJobs, job] // dùng rest paramaters để thêm job mới từ các job đã có
+        });
     }
-    
-    handleChangeName = (event) => {
-        this.setState({ // ghi đè lại thuộc tính name của state, các thuộc tính khác của state vẫn giữ nguyên 
-            name: event.target.value
-        })
-    }
-    
+
     render() {
+        return(
+            <>
+                <FormComponent addNewJob={this.addNewJob}/> {/* truyền hàm addNewJob qua cho component con */}
 
-        return ( // HTML được viết trong "()"
-            // <div className='block-container'> {/* #cách 1 block cha bọc 2 block con*/}
-            //     <div className='block-first'>
-            //         This my Component, My name is: {name} {/* JS được viết trong "{}" */}
-            //     </div> 
-            //     <div className='block-first'>
-            //         <a href='https://github.com/toniiplaycode/Learn-NodeJS-ReactJS'>
-            //             My Link GITHUB
-            //         </a>
-            //     </div>
-            // </div>
-
-            <> {/* #cách 2 dùng Fragment, cách này sẽ không có block cha nào bọc ở ngoài*/}
-                <div className='block-first'>
-                    This my Component, My name is: {this.state.name} 
-                    {/* JS được viết trong "{}" */}
-                </div> 
-                <div className='block-first'>
-                    <a href='https://github.com/toniiplaycode/Learn-NodeJS-ReactJS'>
-                        My Link GITHUB
-                    </a>
-                </div>
-                <div className='block-third'>
-                    Today: {this.state.today}, this is state real time
-                </div>
-                <div className='bloack-fourth'>
-                    <button onClick={(logger) => this.handleClickButton('hello !')}> {/* dùng theo cú pháp này mới truyền tham số được */}
-                        Say hello !
-                    </button>
-                </div>
-                <div>
-                    You can change a new name
-                    <input onChange={(event) => this.handleChangeName(event)} value={this.state.name}/>
-                </div>
+                <ChildComponent arrJobs={this.state.arrJobs}/> 
             </>
         )
     }

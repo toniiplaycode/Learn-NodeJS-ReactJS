@@ -35,11 +35,11 @@
             ex: <button onClick={() => this.handleFunction()}> click me! /button> // hàm handleFunction được khai báo trên rendet()
 - khai báo biến, hàm, state ở phạm vi nằm trên render() được gọi là các thuộc tính của component đó, khi muốn truy cập đến các thuộc tính ta dùng "this". Còn các biến, hàm trong phạm render() được gọi là các biến local, hàm local thì ta truy xuất như bình thường 
 - setState là hàm dùng để cập nhật lại thuộc tính của state và đồng thời React nó sẽ tự động re-render (gọi lại hàm render()) để hiện ra giao diện ngay lập tức
-- tạo file FormComponent.js để lấy dữ liệu từ form, dữ liệu ở form sẽ được lưu vào state. Tron ứng dụng thực tế từ các dữ liệu có trong state đó, ta truyền dữ liệu state đó lên API cho back-end xử lý (phía server side)
+- tạo file FormComponent.js để lấy dữ liệu từ form, dữ liệu ở form sẽ được lưu vào state. Trong ứng dụng thực tế từ các dữ liệu có trong state đó, ta truyền dữ liệu state đó lên API cho back-end xử lý (phía server side)
 - tree components: để xem quan hệ CHA-CON vào components của devTools xem
 - tạo child component của 1 component, tạo file ChildComponent.js là component con của 1 component import vào
 - props dùng để truyền dữ liệu từ component CHA xuống component CON và không thể truyền ngược lại, props có kiểu dữ liệu là object giống như state
-- 1 comment cha có thể chứa nhiều comment con, nên dùng KEY của React cho mỗi component con, vì mỗi comment con sẽ có props (dữ liệu) khác nhau, nếu ta muốn thay đổi cụ thể 1 comment con trong nhiều comment con khác thì dùng KEY sẽ rất hiệu quả
+- 1 component cha có thể chứa nhiều component con, nên dùng KEY của React cho mỗi component con, vì mỗi component con sẽ có props (dữ liệu) khác nhau, nếu ta muốn thay đổi cụ thể 1 component con trong nhiều component con khác thì dùng KEY sẽ rất hiệu quả
     + KEY sẽ không hiện ở trong DOM, React nó sẽ tự biết KEY của mỗi component con do mình đặ
 - Stateless component (không sử dụng được state, trừ khi sử dụng Hooks) và Statefull component (sử dụng được state) tương ứng với function component và class component (https://chat.openai.com/chat/e4be8ecb-da35-4f86-b854-568c957077ef)
     + function chỉ cần return để render, class cần hàm render() để render
@@ -50,3 +50,5 @@
     + nhưng React dùng "&&" còn ngắn ngọn hơn cách dùng if else bình thường, logic so sánh sẽ trước trước "&&", nếu logic đúng thì các đoạn code ở sau "&&" sẽ được thực thi
     + nếu dùng Ternary Operator còn ngắn gọn nữa: condition ? true : false
     -->  nếu là JSX thì vẫn phải nằm trong khối block hoặc Fragment
+- Split Components là chia tách các component 
+- function as props: truyền hàm từ component CHA xuống cho component CON (truyền props), component CON sẽ gọi hàm và hàm của component CHA sẽ thực thi
