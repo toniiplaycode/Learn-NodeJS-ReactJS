@@ -46,3 +46,7 @@
     + class có thể dùng state để lưu trữ và quản lý dữ liệu, dùng được các lifecycle methods
     + function không dùng được state lẫn lifecycle methods, trừ khi sử dụng Hooks
     --> nên dùng function component khi dùng Hooks, còn bình thường thì dùng class component
+- Condition trong React vẫn dùng if else bình thường
+    + nhưng React dùng "&&" còn ngắn ngọn hơn cách dùng if else bình thường, logic so sánh sẽ trước trước "&&", nếu logic đúng thì các đoạn code ở sau "&&" sẽ được thực thi
+    + nếu dùng Ternary Operator còn ngắn gọn nữa: condition ? true : false
+    -->  nếu là JSX thì vẫn phải nằm trong khối block hoặc Fragment

@@ -1,16 +1,8 @@
 import React from "react"; // nạp thư viện react
-import ChildComponent from './ChildComponent'; // nạp component con
-
 class FormComponent extends React.Component{
     state = {
         firstName: '',
-        lastName: '',
-        arrJobs: [
-            { id: 'abcJob1', title: 'Developers', salary: '500$'},
-            { id: 'abcJob2', title: 'Testers', salary: '400$'},
-            { id: 'abcJob3', title: 'Project managers', salary: '1000$'}
-        ]
-       
+        lastName: ''
     }
 
     handleGetFirstName = (event) => {
@@ -54,11 +46,6 @@ class FormComponent extends React.Component{
                         </button>
                     </div>
                 </form>
-
-                {/* gọi các component con và truyền props */}
-                {/* <ChildComponent name={'ThanhToan'} age={20}/>*/} {/* hard code */}
-                {/* <ChildComponent name={this.state.firstName}/>  */} {/* truyền dữ liệu từ state */}
-                <ChildComponent arrJobs={this.state.arrJobs}/> {/* truyền 1 array từ state qua component con xử lý và render */}
             </>
             // nếu gán value của ô input bằng thuộc tính của state thì không thể nhập value từ bàn phím vào ô input được, muốn nhập được khi đã gán value bằng thuộc tính state thì phải dùng events onChange
         )
