@@ -40,4 +40,9 @@
 - tạo child component của 1 component, tạo file ChildComponent.js là component con của 1 component import vào
 - props dùng để truyền dữ liệu từ component CHA xuống component CON và không thể truyền ngược lại, props có kiểu dữ liệu là object giống như state
 - 1 comment cha có thể chứa nhiều comment con, nên dùng KEY của React cho mỗi component con, vì mỗi comment con sẽ có props (dữ liệu) khác nhau, nếu ta muốn thay đổi cụ thể 1 comment con trong nhiều comment con khác thì dùng KEY sẽ rất hiệu quả
-    + KEY sẽ không hiện ở trong DOM, React nó sẽ tự biết KEY của mỗi component con do mình đặt
+    + KEY sẽ không hiện ở trong DOM, React nó sẽ tự biết KEY của mỗi component con do mình đặ
+- Stateless component (không sử dụng được state, trừ khi sử dụng Hooks) và Statefull component (sử dụng được state) tương ứng với function component và class component (https://chat.openai.com/chat/e4be8ecb-da35-4f86-b854-568c957077ef)
+    + function chỉ cần return để render, class cần hàm render() để render
+    + class có thể dùng state để lưu trữ và quản lý dữ liệu, dùng được các lifecycle methods
+    + function không dùng được state lẫn lifecycle methods, trừ khi sử dụng Hooks
+    --> nên dùng function component khi dùng Hooks, còn bình thường thì dùng class component

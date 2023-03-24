@@ -13,7 +13,6 @@ class FormComponent extends React.Component{
        
     }
 
-
     handleGetFirstName = (event) => {
         this.setState({
             firstName: event.target.value
