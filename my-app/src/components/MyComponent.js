@@ -14,8 +14,16 @@ class MyComponent extends React.Component{
     addNewJob = (job) => {
         // console.log(job);
         this.setState({ // thêm job mới từ component con (FormComponent)
-            arrJobs: [...this.state.arrJobs, job] // dùng rest paramaters để thêm job mới từ các job đã có
+            arrJobs: [...this.state.arrJobs, job] // dùng spread để thêm job mới từ các job đã có
         });
+    }
+
+    deleteAJob = (jobId) => { // xoá job
+        let currentJobs = this.state.arrJobs;
+        currentJobs = currentJobs.filter((item) => item.id !== jobId); // dùng filter để loại job theo id
+        this.setState({ // loại xong set lại state
+            arrJobs: currentJobs
+        })
     }
 
     render() {
@@ -23,7 +31,7 @@ class MyComponent extends React.Component{
             <>
                 <FormComponent addNewJob={this.addNewJob}/> {/* truyền hàm addNewJob qua cho component con */}
 
-                <ChildComponent arrJobs={this.state.arrJobs}/> 
+                <ChildComponent arrJobs={this.state.arrJobs} deleteAJob={this.deleteAJob}/>  {/* truyền mảng arrJobs và hàm deleteAJob qua cho component con */}
             </>
         )
     }

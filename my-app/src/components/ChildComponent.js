@@ -11,6 +11,11 @@ class ChildComponent extends React.Component{ //#cách 1 dùng class component (
         })
     }
 
+    handleOnclickDelete = (id) => {
+        console.log('delele job have id: ', id);
+        this.props.deleteAJob(id); // truyền id của job cần xoá qua cho component CHA 
+    }
+
     render() {
         let {arrJobs} = this.props; // có thể dùng destructuring để lấy được value từ props
         let {showJobs} = this.state;
@@ -31,7 +36,7 @@ class ChildComponent extends React.Component{ //#cách 1 dùng class component (
                                 arrJobs.map((item) => {
                                     return (
                                         <div key={item.id}> {/* dùng key cho mỗi item,  không nên dùng index của hàm map để làm key vì các item trong 1 mảng có thể đổi, nên ta dùng id của từng item có sẵn */}
-                                            {item.title} - {item.salary}$
+                                            {item.title} - {item.salary}$ <button onClick={() => this.handleOnclickDelete(item.id)}>xoá</button>
                                         </div>
                                     )
                                 })
