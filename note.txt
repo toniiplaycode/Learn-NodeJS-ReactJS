@@ -52,3 +52,5 @@
     -->  nếu là JSX thì vẫn phải nằm trong khối block hoặc Fragment
 - Split Components là chia tách các component 
 - function as props: truyền hàm từ component CHA xuống cho component CON (truyền props), component CON sẽ gọi hàm và hàm của component CHA sẽ thực thi
+- Virtual DOM là một bản sao của real DOM, các thay đổi trên trang web được thực hiện trên DOM ảo, sau đó DOM ảo và DOM thật so sánh sự khác biệt và chỉ có những thành phần thay đổi mới được cập nhật
+- Lifecycle methods trong ReactJS là các phương thức mà React gọi khi một component được tạo ra, cập nhật hoặc xóa khỏi DOM. Các phương thức này cho phép can thiệp vào quá trình rendering và update của component, giúp bạn quản lý component hiệu quả hơn. Có ba nhóm lifecycle methods trong ReactJS: mounting, updating và unmounting (https://chat.openai.com/chat/2d69f171-c081-49ae-aca0-0df4135aa381)

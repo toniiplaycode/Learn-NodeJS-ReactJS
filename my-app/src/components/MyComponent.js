@@ -26,6 +26,15 @@ class MyComponent extends React.Component{
         })
     }
 
+    // componentDidUpdate(prevProps, prevState){ // hàm này trong Updating của lifecycle 
+    //     console.log('prev state:  ', prevState, 'current state: ', this.state);
+    // }
+
+    // componentDidMount(){ // hàm này trong Mounting của lifecycle
+    //     console.log('called component did mount');
+    // }
+    // => lên hỏi chat GPT tác dụng và cách sd của 2 hàm lifecycle này
+
     render() {
         return(
             <>
