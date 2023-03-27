@@ -1,0 +1,33 @@
+.list-todo-container{
+    .input-add{
+      margin-bottom: 10px;
+    }
+    button{
+      cursor: pointer;
+      font-weight: bold;
+      color: #333;
+    }
+    .add{
+      margin-left: 4px;
+    }
+    .edit{
+      margin-right: 4px;
+    }
+  }
+  
+  .todo-child{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+    div{
+      margin-right: 20px;
+    }
+
+  }
+
+.size-toast{
+  width: 100px !important;
+  height: 20px !important;
+}

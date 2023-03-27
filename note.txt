@@ -12,7 +12,7 @@
     + folder views là các trang (page)
 - xoá bớt vài file không cần thiết và đổi tên phần mở rộng của vài file (https://youtu.be/JsQfIjzaBNE?t=1218)
 - trong project này dùng SCSS để CSS nhanh hơn
-- tải package sass để dùng SCSS (npm i sass)
+- tải package sass để dùng SCSS (npm i sass) và đổi tên phần mở rộng CSS thành SCSS
 - tổ chức lại file (https://youtu.be/JsQfIjzaBNE?t=1693)
 - components là chia code UI thành những khối độc lập, từ nhiều components đó gộp lại thành 1 website
 - có 2 loại component: class component và function component (function bình thường và arrow function)
@@ -54,3 +54,6 @@
 - function as props: truyền hàm từ component CHA xuống cho component CON (truyền props), component CON sẽ gọi hàm và hàm của component CHA sẽ thực thi
 - Virtual DOM là một bản sao của real DOM, các thay đổi trên trang web được thực hiện trên DOM ảo, sau đó DOM ảo và DOM thật so sánh sự khác biệt và chỉ có những thành phần thay đổi mới được cập nhật
 - Lifecycle methods trong ReactJS là các phương thức mà React gọi khi một component được tạo ra, cập nhật hoặc xóa khỏi DOM. Các phương thức này cho phép can thiệp vào quá trình rendering và update của component, giúp bạn quản lý component hiệu quả hơn. Có ba nhóm lifecycle methods trong ReactJS: mounting, updating và unmounting (https://chat.openai.com/chat/2d69f171-c081-49ae-aca0-0df4135aa381)
+- tạo folder TodoApp để làm todo app, tạo component ListToDo.js và ListToDo.scss
+- tạo component AddToDo.js để thêm todo
+- npm i react-toastify: tải thư viên toastify để dùng các theme toastify có sẵn, lên trang (https://fkhadra.github.io/react-toastify/introduction/) để copy code các theme toastify sẵn có
