@@ -68,6 +68,8 @@ class ListToDo extends React.Component{
         return(
             <>
                 <div className="list-todo-container">
+                    <p> Todo App With ReactJS </p>
+
                     <AddToDo 
                         addNewToDo={this.addNewToDo} // truyền function as props qua cho component con
                     />

@@ -57,3 +57,11 @@
 - tạo folder TodoApp để làm todo app, tạo component ListToDo.js và ListToDo.scss
 - tạo component AddToDo.js để thêm todo
 - npm i react-toastify: tải thư viên toastify để dùng các theme toastify có sẵn, lên trang (https://fkhadra.github.io/react-toastify/introduction/) để copy code các theme toastify sẵn có
+- npm i react-router-dom: tải thư viện router dùng để chuyển trang,
+- thư viện react-router-dom này còn được gọi là "Single Pages Application", điểm mạnh nhất của ReactJS
+- tạo folder Nav và file Nav.js, Nav.scss để thêm thanh navigation
+- tạo component file HomeComponent.js để làm route HOME
+- tách component thành các route riêng
+- Link & NavLink : dùng để chuyển các route mà không load lại trang  
+    + links: không active được route đang hoạt động
+    + NavLinks: active được route đang hoạt động
