@@ -11,9 +11,9 @@ import HomeComponent from '../components/HomeComponent.js'; // nạp component H
 
 import {
   BrowserRouter,
-  Routes,
+  Switch,
   Route,
-} from "react-router-dom"; // để chuyển trang (route) thì phải nạp các hàm của thư viện router, ask IT dùng router V5 nên dùng switch, còn mình dùng bản router mới là V6 nên dùng Routes để chuyển trang
+} from "react-router-dom"; // để chuyển trang (route) thì phải nạp các hàm của thư viện router
 
 function App() {
   return (
@@ -39,16 +39,24 @@ function App() {
 
           {/* <ListToDo/>  */}
 
-          {/* chia các component thành các Route riêng và được bọc ở ngoài là Routes (có 's' giống như dùng Switch của router V5) để chuyển Route */}
-          <Routes> 
-            <Route path='/' element={<HomeComponent/>}/>
+          {/* chia các component thành các Route riêng và được bọc ở ngoài là Switch */}
+          <Switch> 
+            <Route path='/' exact>
+              <HomeComponent/>
+            </Route>
             
-            <Route path='/form-add' element={<MyComponent/>} />
+            <Route path='/form-add'>
+              <MyComponent/>
+            </Route>
 
-            <Route path='/todo' element={<ListToDo/>} />
+            <Route path='/todo'>
+              <ListToDo/>
+            </Route>
             
-            <Route path='/about' element={<FirstComponent/>} />
-          </Routes>
+            <Route path='/about'>
+              <FirstComponent/>
+            </Route>
+          </Switch>
 
         </header>
 

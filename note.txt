@@ -1,6 +1,6 @@
 - npx create-react-app my-app: cài đặt môi trường react thì tự động nó cài một đống
 - vào folder my-app gõ npm start để chạy project, mặc định nó chạy trên cổng 3000
-- hạ React 18 xuống ReactJS 17 làm theo AskIT (https://www.youtube.com/watch?v=rKOEjUqBbX8&list=PLncHg6Kn2JT4C0enPGQPK7ZIlEoZ1ZvRy&index=8) 
+- hạ React 18 xuống ReactJS 17 làm theo AskIT (https://www.youtube.com/watch?v=rKOEjUqBbX8&list=PLncHg6Kn2JT4C0enPGQPK7ZIlEoZ1ZvRy&index=8) (không xuống theo thì về sau code lỗi)
 - cấu trúc lại các file trong project từ 1 đống file nó tự cài (https://youtu.be/JsQfIjzaBNE?t=608), tạo các folder: assets, component, routes, store, styles, utils, views. Trong assets có 2 folder là images, audio
     + folder assets chứa các file muốn public ra ngoài ảnh, video, audio,...
     + folder components là nơi để chia sẻ, sử dụng lại, tái sử dụng các component
@@ -8,7 +8,7 @@
     + folder services để gọi API, kết nối với back-end
     + folder store để viết REDUX
     + folder styles để viết các file SCSS
-    + folder utils chứa các function dùng chung
+    + folder utils chứa các function d chung
     + folder views là các trang (page)
 - xoá bớt vài file không cần thiết và đổi tên phần mở rộng của vài file (https://youtu.be/JsQfIjzaBNE?t=1218)
 - trong project này dùng SCSS để CSS nhanh hơn
@@ -57,7 +57,7 @@
 - tạo folder TodoApp để làm todo app, tạo component ListToDo.js và ListToDo.scss
 - tạo component AddToDo.js để thêm todo
 - npm i react-toastify: tải thư viên toastify để dùng các theme toastify có sẵn, lên trang (https://fkhadra.github.io/react-toastify/introduction/) để copy code các theme toastify sẵn có
-- npm i react-router-dom: tải thư viện router dùng để chuyển trang,
+- npm i react-router-dom@5.3.0: tải thư viện router dùng để chuyển trang, tải đúng version 
 - thư viện react-router-dom này còn được gọi là "Single Pages Application", điểm mạnh nhất của ReactJS
 - tạo folder Nav và file Nav.js, Nav.scss để thêm thanh navigation
 - tạo component file HomeComponent.js để làm route HOME
@@ -65,3 +65,4 @@
 - Link & NavLink : dùng để chuyển các route mà không load lại trang  
     + links: không active được route đang hoạt động
     + NavLinks: active được route đang hoạt động
+- withRouter dùng để điều hướng đến một route khác    

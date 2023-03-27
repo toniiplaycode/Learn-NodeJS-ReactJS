@@ -23,10 +23,10 @@ class Nav extends React.Component{
                     <Link to="/about">About</Link> */}
                     {/* --> dùng Link không active được route */}
 
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="/todo">Todo</NavLink>
-                    <NavLink to="/form-add">Form Add</NavLink>
-                    <NavLink to="/about">About</NavLink>
+                    <NavLink to="/" activeClassName="active" exact={true}>Home</NavLink>
+                    <NavLink to="/todo" activeClassName="active">Todo</NavLink>
+                    <NavLink to="/form-add" activeClassName="active">Form Add</NavLink>
+                    <NavLink to="/about" activeClassName="active">About</NavLink>
                     {/* --> dùng NavLink active được route */}
                 </div>
             </>
