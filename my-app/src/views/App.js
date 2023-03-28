@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css'; // nạp CSS của thư viện t
 import './TodoApp/ListToDo.scss'; 
 import Nav from './Nav/Nav.js'; // nạp component Nav
 import HomeComponent from '../components/HomeComponent.js'; // nạp component HomeComponent để làm route HOME
+import ListUserComponent from '../components/ListUserComponent.js'; // nạp component ListUserComponent để render users 
 
 import {
   BrowserRouter,
@@ -55,6 +56,10 @@ function App() {
             
             <Route path='/about'>
               <FirstComponent/>
+            </Route>
+            
+            <Route path='/users'>
+              <ListUserComponent/>
             </Route>
           </Switch>
 

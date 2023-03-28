@@ -8,7 +8,7 @@
     + folder services để gọi API, kết nối với back-end
     + folder store để viết REDUX
     + folder styles để viết các file SCSS
-    + folder utils chứa các function d chung
+    + folder utils chứa các function dùng chung
     + folder views là các trang (page)
 - xoá bớt vài file không cần thiết và đổi tên phần mở rộng của vài file (https://youtu.be/JsQfIjzaBNE?t=1218)
 - trong project này dùng SCSS để CSS nhanh hơn
@@ -66,3 +66,9 @@
     + links: không active được route đang hoạt động
     + NavLinks: active được route đang hoạt động
 - withRouter dùng để điều hướng đến một route khác    
+- HOC(higher-order component) là 1 hàm, nhận tham số là 1 component và trả ponent thì component đó sẽ có thêm nhiều propsvề 1 component, HOC giúp trách lập lại code và sử dụng lại logic cho nhiều component khác nhau, khi dùng HOC trên 1 com
+- tạo folder HOC để tự viết HOC, tạo file color.js để tạo màu chữ random, dùng function component để viết hàm HOC (vì hàm này chỉ nhận props, không dùng state)
+- Axios là thư viện, dùng để tương tác với API để lấy dữ liệu, Axios hỗ trợ Promise và async/await. Axios cung cấp các phương thức GET, POST, PUT, DELETE
+- npm i @testing-library/react@12.1.2, mặc định là cài bản mới nhất là 13.5.0, nhưng do mình dùng React 17 nên phải hạ xuống 12.1.2 mới cài được axios, nếu không hạ test-library/react xuống 12.1.2 thì sẽ không cài được axios, nếu dùng React 18 thì khỏi cần hạ 
+- npm i axios: cài thư viện axios
+- tạo component ListUserComponent.js dùng axios (promise hoặc async/await) để lấy dữ liệu từ API và lưu vào state rồi render ra
