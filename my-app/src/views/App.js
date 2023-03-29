@@ -9,6 +9,7 @@ import './TodoApp/ListToDo.scss';
 import Nav from './Nav/Nav.js'; // nạp component Nav
 import HomeComponent from '../components/HomeComponent.js'; // nạp component HomeComponent để làm route HOME
 import ListUserComponent from '../components/ListUserComponent.js'; // nạp component ListUserComponent để render users 
+import DetailUserComponent from '../components/DetailUserComponent.js'; // nạp component DetailUserComponent để xem chi tiết mỗi user
 
 import {
   BrowserRouter,
@@ -42,7 +43,7 @@ function App() {
 
           {/* chia các component thành các Route riêng và được bọc ở ngoài là Switch */}
           <Switch> 
-            <Route path='/' exact>
+            <Route path='/' exact> {/* exact dùng khi đúng chính xác route '/' */}
               <HomeComponent/>
             </Route>
             
@@ -58,8 +59,12 @@ function App() {
               <FirstComponent/>
             </Route>
             
-            <Route path='/users'>
+            <Route path='/user' exact> {/* exact dùng khi đúng chính xác route '/user' */}
               <ListUserComponent/>
+            </Route>
+            
+            <Route path='/user/:id'> {/* tham số route */}
+              <DetailUserComponent/>
             </Route>
           </Switch>
 

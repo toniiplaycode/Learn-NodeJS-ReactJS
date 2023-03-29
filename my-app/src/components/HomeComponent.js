@@ -3,13 +3,12 @@ import { withRouter } from 'react-router-dom';
 import Color from "../views/HOC/Color.js"; // nạp HOC Color.js
 
 class HomeComponent extends React.Component{
-    
     // componentDidMount(){ // khi hàm render chạy xong thì hàm componentDidMount này sẽ được chạy
     //     setTimeout(()=>{
-    //         this.props.history.push('/todo'); // sau 3s sẽ tự động chuyển trang todo
-    //     }, 3000)
-    // }
-
+        //         this.props.history.push('/todo'); // sau 3s sẽ tự động chuyển trang todo
+        //     }, 3000)
+        // }
+        
     render(){
         // console.log(this.props); // khi dùng withRouter sẽ có 3 props tự động có là history, location, match
 

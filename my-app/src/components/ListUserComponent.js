@@ -1,12 +1,13 @@
 import React from "react";
 import axios from "axios";
+import { withRouter } from "react-router-dom"; // dùng withRouter để component này có 3 props, lấy props history.push để chuyển trang DetailUser
 
 class ListUserComponent extends React.Component{
     state = {
         listUser: []
     }
 
-    // componentDidMount() { // componentDidMount là methods trong lifecycle được gọi sau hàm render(), componentDidMount thường dùng để gọi API để lấy dữ liệu, khởi tạo event listener, thiết lập các state cho component
+    // componentDidMount() { // componentDidMount là methods trong lifecycle được gọi sau hàm render(), componentDidMount thường dùng để gọi API để lấy dữ liệu, khởi tạo event listener, thiết lập các state, props cho component
     //     axios.get('https://reqres.in/api/users?page=1') // dùng promise 
     //         .then(res => {
     //             this.setState({
@@ -27,9 +28,13 @@ class ListUserComponent extends React.Component{
     }
 
 
+    handleDetailUser(id) {
+        this.props.history.push(`/user/${id}`); // dùng history.push để chuyển trang DetailUser
+    }
+
     render(){
         const {listUser} = this.state;
-        console.log(listUser);
+        // console.log(listUser);
 
         return(
             <>
@@ -39,6 +44,9 @@ class ListUserComponent extends React.Component{
                             return (
                                 <div className="user-item" key={item.id}>
                                     {index + 1} - {item.first_name} {item.last_name}
+                                    <button onClick={() => this.handleDetailUser(item.id)}>
+                                        Detail
+                                    </button>
                                 </div>
                             )
                         })
@@ -49,4 +57,4 @@ class ListUserComponent extends React.Component{
     }
 } 
 
-export default ListUserComponent;
+export default withRouter(ListUserComponent);
