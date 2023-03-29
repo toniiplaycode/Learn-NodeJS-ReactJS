@@ -79,3 +79,4 @@
 - tạo component ListUserComponent.js dùng axios (promise hoặc async/await) để lấy dữ liệu từ API và lưu vào state rồi render ra
 - route paramaters: truyền tham số lên route, dùng để chuyển trang, ví dụ: truyền id của user để xem chi tiết user đó
 - muốn lấy tham số trên route thì dùng hàm withRouter của react-router-dom
+- import images: lưu ảnh trong folder assets/images, khi muốn dùng ảnh thì import ảnh, không nên dùng thẳng trong thuộc tính src trong thẻ img

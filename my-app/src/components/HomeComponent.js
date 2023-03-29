@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from 'react-router-dom';
 import Color from "../views/HOC/Color.js"; // nạp HOC Color.js
+import imgKeyBoard from "./assets/images/keyboard.jpg"; // import hình
 
 class HomeComponent extends React.Component{
     // componentDidMount(){ // khi hàm render chạy xong thì hàm componentDidMount này sẽ được chạy
@@ -17,6 +18,12 @@ class HomeComponent extends React.Component{
                 <h1>
                     HOME Route ReactJS
                 </h1>
+                <span>
+                    import image
+                </span>
+                <div>
+                    <img src={imgKeyBoard} style={{width:'300px', borderRadius: '10px'}}/>
+                </div>
             </>
         )
     }
