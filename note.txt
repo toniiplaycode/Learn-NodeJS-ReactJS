@@ -6,7 +6,7 @@
     + folder components là nơi để chia sẻ, sử dụng lại, tái sử dụng các component
     + folder routes là nơi định nghĩa các route (các đường dẫn của trang web)
     + folder services để gọi API, kết nối với back-end
-    + folder store để viết REDUX
+    + folder store để viết Redux
     + folder styles để viết các file SCSS
     + folder utils chứa các function dùng chung
     + folder views là các trang (page)
@@ -71,8 +71,8 @@
         * các props hay dùng:
             - this.props.history.push('/<route>'): điều hướng trang
             - this.props.match.params.<tên tham số mình truyền ở path>: lấy tham số trên route
-- HOC(higher-order component) là 1 hàm, nhận tham số là 1 component và trả ponent thì component đó sẽ có thêm nhiều props về 1 component, HOC giúp trách lập lại code và sử dụng lại logic cho nhiều component khác nhau, khi dùng HOC trên 1 com
-- tạo folder HOC để tự viết HOC, tạo file color.js để tạo màu chữ random, dùng function component để viết hàm HOC (vì hàm này chỉ nhận props, không dùng state)
+- HOC(higher-order component) là 1 hàm, nhận tham số là 1 component và trả về 1 component mới thì component đó sẽ có thêm nhiều props, HOC giúp trách lập lại code và sử dụng lại logic cho nhiều component khác nhau
+- tạo folder HOC để tựsviết HOC, tạo file color.js để tạo màu chữ random, dùng function component để viết hàm HOC (vì hàm này chỉ nhận props, không dùng state)
 - Axios là thư viện, dùng để tương tác với API để lấy dữ liệu, Axios hỗ trợ Promise và async/await. Axios cung cấp các phương thức GET, POST, PUT, DELETE
 - npm i @testing-library/react@12.1.2, mặc định là cài bản mới nhất là 13.5.0, nhưng do mình dùng React 17 nên phải hạ xuống 12.1.2 mới cài được axios, nếu không hạ test-library/react xuống 12.1.2 thì sẽ không cài được axios, nếu dùng React 18 thì khỏi cần hạ 
 - npm i axios: cài thư viện axios
@@ -80,3 +80,15 @@
 - route paramaters: truyền tham số lên route, dùng để chuyển trang, ví dụ: truyền id của user để xem chi tiết user đó
 - muốn lấy tham số trên route thì dùng hàm withRouter của react-router-dom
 - import images: lưu ảnh trong folder assets/images, khi muốn dùng ảnh thì import ảnh, không nên dùng thẳng trong thuộc tính src trong thẻ img
+- Redux là thư viện quản lý state(state của Redux chứ không phải state của React), Redux nó chạy song song với React, tất cả state của ứng dụng được lưu vào "stores" và các component có thể truy cập, cập nhật các state đó thông qua các "actions" được gửi đến "reducers". Reducers nhận các actions và xử lý để cập nhật lại các state trong stores (https://chat.openai.com/chat/0da1f2e2-9f11-497b-9a19-36ae2e949db1)
+- npm i redux react-redux: cài 2 thư viện Redux 
+- Redux sẽ bọc component App (component to nhất) bên file App.js để Redux sẽ được khởi động cùng với React
+- tạo 2 folder actions, reducers trong folder store. Redux sẽ được viết trong folder store
+- viết reducer trong file rootReducer.js
+- mapping state(redux) to props(react): truyền dữ liệu từ state Redux xuống props React, hàm mapStateToProps được dùng bên HomeComponent.js để lấy được state của Redux. Dùng hàm connect HOC mới có thể kết nối HomeComponent với Redux. Các component nào muốn kết nối với Redux để dùng state (state của Redux) thì phải dùng hàm connect HOC
+- Thêm/Xoá/Sửa state của Redux thì phải thông qua "action", action là Redux là 1 object, action gồm type và payload
+    + type: tên của action
+    + payload: dữ liệu liên quan đến action
+    --> action phải có type, còn payload thì không bắt buộc
+- muốn dùng được action thì dùng hàm mapDispatchToProps    
+- cài Redux devTools và config trong file index.js để thấy được state, action của Redux
