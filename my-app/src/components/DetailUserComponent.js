@@ -34,7 +34,7 @@ class DetailUserComponent extends React.Component{
                 {isEmptyObj === false ? 
                     <>
                         <div>
-                            <img src={user.avatar}/>
+                            <img src={user.avatar} alt="avater_user"/>
                         </div>
                         <div>Name: {user.first_name} {user.last_name}</div>
                         <div>Email: {user.email}</div>

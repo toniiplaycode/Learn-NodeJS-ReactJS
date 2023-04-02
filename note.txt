@@ -74,7 +74,7 @@
 - HOC(higher-order component) là 1 hàm, nhận tham số là 1 component và trả về 1 component mới thì component đó sẽ có thêm nhiều props, HOC giúp trách lập lại code và sử dụng lại logic cho nhiều component khác nhau
 - tạo folder HOC để tựsviết HOC, tạo file color.js để tạo màu chữ random, dùng function component để viết hàm HOC (vì hàm này chỉ nhận props, không dùng state)
 - Axios là thư viện, dùng để tương tác với API để lấy dữ liệu, Axios hỗ trợ Promise và async/await. Axios cung cấp các phương thức GET, POST, PUT, DELETE
-- npm i @testing-library/react@12.1.2, mặc định là cài bản mới nhất là 13.5.0, nhưng do mình dùng React 17 nên phải hạ xuống 12.1.2 mới cài được axios, nếu không hạ test-library/react xuống 12.1.2 thì sẽ không cài được axios, nếu dùng React 18 thì khỏi cần hạ 
+- npm i @testing-library/react@12.1.2, mặc định là cài bản mới nhất là 13.4.0, nhưng do mình dùng React 17 nên phải hạ xuống 12.1.2 mới cài được axios, nếu không hạ test-library/react xuống 12.1.2 thì sẽ không cài được axios, nếu dùng React 18 thì khỏi cần hạ 
 - npm i axios: cài thư viện axios
 - tạo component ListUserComponent.js dùng axios (promise hoặc async/await) để lấy dữ liệu từ API và lưu vào state rồi render ra
 - route paramaters: truyền tham số lên route, dùng để chuyển trang, ví dụ: truyền id của user để xem chi tiết user đó
@@ -91,4 +91,4 @@
     + payload: dữ liệu liên quan đến action
     --> action phải có type, còn payload thì không bắt buộc
 - muốn dùng được action thì dùng hàm mapDispatchToProps    
-- cài Redux devTools và config trong file index.js để thấy được state, action của Redux
+- cài Redux devTools và config trong file index.js để thấy được state, action của Reduxe
